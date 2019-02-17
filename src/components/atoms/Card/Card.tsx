@@ -3,30 +3,22 @@ import styled from 'styled-components'
 
 interface Props {
   /**
-   * Background color of the card
-   * @default white
-   */
-  color?: string
-
-  /**
    * Click handler
    */
   onClick?: () => void
   children: React.ReactNode
 }
 
-const Card = ({ color = 'white', onClick, children }: Props) => {
+const Card = ({ onClick, children }: Props) => {
   return (
-    <Container color={color} onClick={onClick}>
+    <Container onClick={onClick}>
       { children }
     </Container>
   )
 }
 
 const Container = styled.div`
-  background: ${props => props.color};
-  border: 1px solid #eee;
-  padding: 30px;
+  cursor: pointer;
 `
 
 export default Card
