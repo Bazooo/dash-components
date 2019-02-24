@@ -1,12 +1,14 @@
 import * as React from 'react'
 import { number } from '@storybook/addon-knobs'
 import { storiesOf } from '@storybook/react'
+import centered from '@storybook/addon-centered';
 
 import BarIndicator from './BarIndicator'
 
-const stories = storiesOf('Atoms|BarIndicator', module)
+const stories = storiesOf('Atoms.BarIndicator', module)
+stories.addDecorator(centered)
 
-stories.add('BarIndicator', () => {
+stories.add('Base', () => {
   const options = {
     range: true,
     min: -100,

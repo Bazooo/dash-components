@@ -1,17 +1,18 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
-interface Props {
+export interface CardProps {
   /**
    * Click handler
    */
   onClick?: () => void
+  className?: string
   children: React.ReactNode
 }
 
-const Card = ({ onClick, children }: Props) => {
+const Card = ({ onClick, children, className }: CardProps) => {
   return (
-    <Container onClick={onClick}>
+    <Container onClick={onClick} className={className} >
       { children }
     </Container>
   )

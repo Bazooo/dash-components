@@ -7,9 +7,14 @@ interface Props {
    * @default 0
    */
   position?: number
+  /**
+   * Position (percentage) of the Indicator
+   * @default 0
+   */
+  color?: string
 }
 
-const BarIndicator = ({ position = 0 }: Props) => {
+const BarIndicator = ({ position = 0, color = 'white' }: Props) => {
   return (
     <Container>
       <Indicator position={position} />
